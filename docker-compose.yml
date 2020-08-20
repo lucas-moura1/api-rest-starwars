@@ -1,0 +1,29 @@
+version: "3.6"
+
+services:
+    api:
+        container_name: SW-flask-api
+        build: .
+        command: gunicorn -b 0.0.0.0:4000 wsgi --reload
+        volumes:
+            - .:/app/
+        environment:
+            ENV: 'dev'
+            DB_MONGODB_NAME_TEST: 'api-planet-test'
+            DB_MONGODB_NAME: 'api-planet'
+            DB_MONGODB_ENDPOINT: 'mongodb://mongo/'
+            URL_SWAPI: 'https://swapi.dev/api/planets/'
+        ports:
+            - "4000:4000"
+        depends_on:
+            - mongo
+        links:
+            - mongo
+
+    mongo:
+        container_name: SW-mongo-db
+        image: 'mongo'
+        volumes:
+            - ./data:/data/db
+        ports:
+            - "27017:27017"
