@@ -1,4 +1,4 @@
-![STARWARS](docs/star-wars-log.png?raw=true "Logo STARWARS")
+![STARWARS](docs/star-wars-logo.png?raw=true "Logo STARWARS")
 
 # api-rest-StarWars-Flask
 
