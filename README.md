@@ -1,3 +1,5 @@
+![STARWARS](docs/star-wars-log.png?raw=true "Logo STARWARS")
+
 # api-rest-StarWars-Flask
 
 Este repositório contém uma API REST em Node.js que contenha os dados dos planetas que são obtidos através do banco de dados MongoDB da aplicação, sendo inserido manualmente: Nome, Clima, Terreno.
