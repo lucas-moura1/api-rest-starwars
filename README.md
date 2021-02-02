@@ -26,7 +26,7 @@ sudo docker-compose up --build
 - ```sudo docker-compose up``` para rodar a aplicação;
 - ```docker ps``` para obter ***id*** do container da aplicação principal;
 - ```docker exec -it <container_id> bash``` para executar o bash e "entrar" no container da aplicação principal;
-- ```python -m unittes``` para executar os testes.
+- ```python -m unittest``` para executar os testes.
 
 ## Acessando as funcionalidades da aplicação
 
