@@ -17,16 +17,14 @@ Funcionalidades da Aplicação:
 É necessário ter o ***docker*** e o ***docker-compose*** instalado na máquina local e executar o seguinte comando no terminal dentro da pasta do repositório:
 
 ```
-sudo docker-compose up --build
+docker-compose up --build
 ```
 
 ## Executando os testes
 
 - Alterar a variável de ambiente chamado ***ENV*** dentro do arquivo ```docker-compose.yml``` de ***dev*** para ***test***;
-- ```sudo docker-compose up``` para rodar a aplicação;
-- ```docker ps``` para obter ***id*** do container da aplicação principal;
-- ```docker exec -it <container_id> bash``` para executar o bash e "entrar" no container da aplicação principal;
-- ```python -m unittest``` para executar os testes.
+- ```docker compose up``` para rodar a aplicação;
+- ```pytest``` para executar os testes.
 
 ## Acessando as funcionalidades da aplicação
 
