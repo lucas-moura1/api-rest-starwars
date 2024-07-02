@@ -9,7 +9,6 @@ Funcionalidades da Aplicação:
  - Listar planetas;
  - Atualizar os dados de planeta;
  - Buscar por nome;
- - Buscar por ID;
  - Remover planeta.
 
 ## Executando a aplicação
