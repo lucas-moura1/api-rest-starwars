@@ -16,8 +16,8 @@ Funcionalidades da Aplicação:
 
 É necessário ter o ***docker*** e o ***docker-compose*** instalado na máquina local e executar o seguinte comando no terminal dentro da pasta do repositório:
 
-```
-docker-compose up --build
+```bash
+docker compose up
 ```
 
 ## Executando os testes
@@ -30,28 +30,28 @@ docker-compose up --build
 
 #### Adicionar um planeta (com nome, clima e terreno)
 
-POST: localhost:4000/planet
- - body: { "name" : "xxx", "cliamte" : "yyyyy", "terrain" : "zzzzzz" }
+POST: localhost:8000/planets
+ - body:
+```json
+{ "name" : "xxx", "cliamte" : "yyyyy", "terrain" : "zzzzzz" }
+```
 
 #### Listar planetas
 
-GET: localhost:4000/planet
+GET: localhost:8000/planets
 
 #### Buscar por nome;
 
-GET: localhost:4000/planet/name/:planet_name
-
-#### Buscar por ID;
-
-GET: localhost:4000/planet/id/:planet_id
+GET: localhost:8000/planets/:planet_name
 
 #### Atualizar planeta
 
-DELETE: localhost:4000/planet
- - query: ```name=planet_name```
- - body: o(s) campo(s) que deseja atualizar(JSON)
+PUT: localhost:8000/planets/:planet_name
+ - body:
+```json
+{"cliamte" : "yyyyy", "terrain" : "zzzzzz", "count_films": 3 }
+```
 
 #### Remover planeta
 
-DELETE: localhost:4000/planet
- - query: ```name=planet_name```
+DELETE: localhost:8000/planets/:planet_name
